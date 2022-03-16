@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "upgrade" ] || [ "$1" = "configure" ]; then
+    update-alternatives --quiet --remove -gcc /usr/bin/-gcc-4.7
+    update-alternatives --quiet --remove -gcov /usr/bin/-gcov-4.7
+fi
+
+#DEBHELPER#
+
+exit 0
