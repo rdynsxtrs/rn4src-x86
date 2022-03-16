@@ -1,0 +1,21 @@
+--- a/configure.in	2014-11-24 02:29:51.679467302 +0100
++++ b/configure.in	2014-11-24 08:42:35.657239200 +0100
+@@ -15,7 +15,6 @@
+ if test $host != $build; then
+   AC_CHECK_PROGS(BUILD_CC, gcc cc)
+ fi
+-AC_SUBST(cross_compiling)
+ AC_PROG_CPP
+ # We need the C++ compiler only for testing.
+ AC_PROG_CXX
+--- a/config.make.in	2010-08-08 16:42:46.000000000 +0200
++++ b/config.make.in	2014-11-24 09:38:36.483880137 +0100
+@@ -99,7 +99,7 @@
+ add-ons = @add_ons@
+ add-on-subdirs = @add_on_subdirs@
+ sysdeps-add-ons = @sysdeps_add_ons@
+-cross-compiling = @cross_compiling@
++cross-compiling = no
+ force-install = @force_install@
+ 
+ # Build tools.
